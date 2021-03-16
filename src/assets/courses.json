@@ -1,0 +1,30 @@
+[
+    {
+        "code": "COSC301",
+        "name": "Data Structures and Algorithms"
+    },
+    {
+        "code": "COSC303",
+        "name": "Computer Architecture"
+    },
+    {
+        "code": "COSC305",
+        "name": "Systems Analysis and Design"
+    },
+    {
+        "code": "COSC307",
+        "name": "Web Applications Engineering I"
+    },
+    {
+        "code": "COSC309",
+        "name": "Database Management Systems"
+    },
+    {
+        "code": "COSC311",
+        "name": "Organization of Programming Languages"
+    },
+    {
+        "code": "MATH311",
+        "name": "Mathematical Modelling"
+    }
+]
