@@ -51,7 +51,7 @@ export default {
 <style scoped>
 li {
   display: flex;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.555);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.565);
 }
 
 span {
