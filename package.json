@@ -12,6 +12,8 @@
     "core-js": "^3.6.5",
     "filestack-js": "^3.22.1",
     "intersection-observer": "^0.12.0",
+    "node-fetch": "^3.0.0-beta.9",
+    "pouchdb": "^7.2.2",
     "register-service-worker": "^1.7.1",
     "v-viewer": "^1.5.1",
     "viewerjs": "^1.9.0",
