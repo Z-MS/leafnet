@@ -1,48 +1,31 @@
-
 <template>
-  <div>
-    <pdf
-      v-for="i in numPages"
-      :key="i"
-      :src="src"
-      :page="i"
-      style="height: 100%;"
-    ></pdf>
-  </div>
+<div>
+  <iframe height="100%" width=100% :src="`${getFilePath}`" frameborder="0"></iframe>
+</div>
 </template>
 
 <script>
-
-import pdf from 'vue-pdf'
-
-// TRY IFRAMES AGAIN. use the build as the iframe src
-
 export default {
-  components: {
-    pdf
-  },
-  data: () => ({
-    doc: null,
-    src: null,
-    numPages: undefined
-  }),
+  name: 'PDFJSViewer',
   props: {
-    file: { type: String, required: true }
+    fileName: String,
+    path: String
   },
-  created () {
-    this.src = pdf.createLoadingTask(this.file)
-  },
-  mounted () {
-    this.src.promise.then(pdf => {
-      this.numPages = pdf.numPages;
-    });
+  computed: {
+    getFilePath: function () {
+      if (this.fileName !== '') {
+        return this.path + '?file=' + this.fileName
+      }
+      return this.path
+    }
   }
 }
 </script>
-
 <style scoped>
-  div {
-    overflow-y: auto;
-    overflow-scrolling: touch;
-  }
+div {
+  /*width: 50%;*/
+  height: 79vh;
+  /*min-width: 400px;*/
+}
+
 </style>

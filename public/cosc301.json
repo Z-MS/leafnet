@@ -4,11 +4,14 @@
 	"pqs": [
 		{
 			"name":"COSC301 2017-2019",
-			"url": "COSC301 PQ"
+			"type": "pdf",
+			"files": ["cosc301 pq"]
 		},
 		{
 			"name":"COSC301 2013-2016",
-			"url": "Figure"
+			"url": "Figure",
+			"type": "image",
+			"images": 9
 		}
 	]
 }

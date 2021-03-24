@@ -7,8 +7,8 @@
     </v-tabs>
     <v-tabs-items v-model="tab">
       <v-tab-item><videos :videos="courseComp.videos"/></v-tab-item>
-      <v-tab-item><docs :docs="courseComp.notes"/></v-tab-item>
-      <v-tab-item><docs :docs="courseComp.pqs"/></v-tab-item>
+      <v-tab-item><docs :docs="courseComp.notes" :dir="courseComp.name"/></v-tab-item>
+      <v-tab-item><docs :docs="courseComp.pqs" :dir="courseComp.name"/></v-tab-item>
     </v-tabs-items>
   </v-container>
 </template>
@@ -33,6 +33,7 @@ export default {
     const courseCode = this.$route.params.name.toLowerCase()
     const response = await axios.get(`../${courseCode}.json`)
     const course = response.data
+    course.name = courseCode
     this.course = course
   },
   computed: {
