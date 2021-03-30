@@ -8,7 +8,7 @@
       <v-icon v-if="!atHome" @click="$router.push('/')">mdi-arrow-left</v-icon>
       <v-spacer></v-spacer>
       <div class="d-flex align-center">
-        <span class="mr-2" v-show="atHome">LEAFNET</span>
+        <span class="mr-2" v-show="atHome"><router-link to="/about">LEAFNET</router-link></span>
         <span class="mr-2" v-show="!atHome">{{ showCode }}</span>
       </div>
 
@@ -40,4 +40,7 @@ export default {
 </script>
 
 <style scoped>
+a {
+  color: white;
+}
 </style>

@@ -4,7 +4,7 @@
       <v-btn @click="close">CLOSE</v-btn>
       <v-list v-if="hasChapters">
         <v-list-item-group>
-          <v-list-item v-for="(chapter, index) in chapters">
+          <v-list-item v-for="(chapter, index) in chapters" :key="index">
             <v-list-item-content>
               <v-list-item-title @click="open(chapter)">{{ chapter }}</v-list-item-title>
             </v-list-item-content>
