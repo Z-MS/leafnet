@@ -4,13 +4,14 @@ self.addEventListener('message', (event) => {
   }
 });
 
-self.addEventListener('fetch', (event) => {
+/*self.addEventListener('fetch', (event) => {
+	console.log(event.request)
 	event.respondWith(
 		caches.match(event.request).then((response) => response || fetch(event.request))
 	)
-})
+})*/
 
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("index.html"));
+workbox.routing.registerNavigationRoute('index.html');
