@@ -1,5 +1,9 @@
 # leafnet
+A progressive web app that gathers all your school resources in one place
 
+## Demo
+You can find the live demo of the app here: <https://www.leafnet.netlify.app>.
+It is still in the very early stages of development
 ## Project setup
 ```
 npm install
