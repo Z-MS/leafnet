@@ -4,14 +4,10 @@ self.addEventListener('message', (event) => {
   }
 });
 
-/*self.addEventListener('fetch', (event) => {
-	console.log(event.request)
-	event.respondWith(
-		caches.match(event.request).then((response) => response || fetch(event.request))
-	)
-})*/
 
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerNavigationRoute('index.html');
+
+workbox.routing.registerRoute(/\.pdf|\.jpg/, new workbox.strategies.CacheFirst())
